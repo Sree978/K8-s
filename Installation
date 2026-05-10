@@ -37,3 +37,29 @@ minikube start
    30  minikube status
    31  kubectl get pods
    32  kubectl port-forward --address 0.0.0.0 service/hello-minikube 7080:8080
+
+kubectl cluster-info 
+minikube stop     Stop cluster temporarily
+minikube delete   Remove cluster completely    (minikube delete -p cluster1) 
+Minikube      Creates Kubernetes cluster
+kubectl       Talks to Kubernetes cluster
+minikube profile list     To check how many clusters/profiles exist in Minikube
+
+kubectl get all -A -o yaml > backup.yaml     to backup 
+kubectl apply -f backup.yaml       to restore 
+
+/////Simple Relationship////
+    
+Minikube  → Creates Kubernetes Cluster    is a tool used to create a local Kubernetes cluster. 
+kubectl   → Talks to Cluster        is a CLI tool to communicate with Kubernetes cluster.
+Cluster   → Runs Applications       A cluster is the actual Kubernetes environment where applications run.
+
+Developer/DevOps Engineer
+            ↓
+         kubectl
+            ↓
+      Kubernetes API Server
+            ↓
+        Kubernetes Cluster
+            ↓
+Pods | Services | Deployments
