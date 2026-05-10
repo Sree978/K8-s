@@ -33,3 +33,15 @@ Security and role-based access control (RBAC)
 Multi-node and multi-cluster management
 Monitoring, logging, and rolling updates
 It is widely used in enterprise production environments to manage large-scale containerized applications.
+\
+API Sever :
+/
+Kubernetes API Server is the main control component of Kubernetes that receives and processes all cluster requests.
+Functions:
+Acts as the entry point of the Kubernetes cluster
+Accepts commands from users, kubectl, and other components
+Validates and processes API requests
+Communicates with etcd to store cluster data
+Manages cluster state and resources
+Example:
+When we run kubectl get pods, the request first goes to the API Server.
