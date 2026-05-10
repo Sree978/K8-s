@@ -43,3 +43,32 @@ Pods share:Network,Storage ,IP address
 Important: Pods are temporary (ephemeral) in nature.
 Simple Interview Line:
 “Pods are the smallest execution units where applications run inside containers.”
+
+Control Plane Components in Kubernetes
+1. kubectl
+kubectl is a command-line tool used to interact with Kubernetes cluster.
+Users/admins use it to create, delete, update, and monitor resources.
+Example : kubectl get pods
+Interview Line:
+“kubectl is a CLI tool that communicates with the API Server.”
+
+2. API Server
+Main entry point of Kubernetes cluster.Receives all requests from kubectl and other components.Validates requests and processes them.Communicates with etcd.
+Interview Line:
+“API Server acts as the heart of Kubernetes communication.”
+3. etcd : Distributed key-value database of Kubernetes.Stores entire cluster information and current state.Source of truth for the cluster.
+Stores:Pods,Deployments,Secrets,ConfigMaps &Node details
+Interview Line:
+“etcd is the database/brain of Kubernetes.”
+4. Scheduler
+Decides on which worker node the pod should run.Checks CPU, memory, and resource availability.
+Example: If Node1 has enough resources, Scheduler places pod on Node1.
+Interview Line:
+“Scheduler performs intelligent pod placement.”
+
+5. Controller Manager: Maintains desired state of cluster.Continuously checks actual state vs desired state.
+Example:
+Desired replicas = 3
+One pod crashes → controller recreates it automatically.
+Interview Line:
+“Controller Manager ensures the cluster always stays in desired state.”
