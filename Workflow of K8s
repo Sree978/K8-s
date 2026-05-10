@@ -23,3 +23,50 @@ Pod scheduling	          Scheduler
 Auto healing	            Controller
 Node communication	       Kubelet
 Data storage	              etcd
+
+
+kubectl cluster-info
+   1  minikube start --force
+   2  kubectl cluster-info
+   3  clear
+   4  vim deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: nginx-deployment
+
+spec:
+  replicas: 3
+
+  selector:
+    matchLabels:
+      app: nginx
+
+  template:
+    metadata:
+      labels:
+        app: nginx
+
+    spec:
+      containers:
+      - name: nginx-container
+        image: nginx:latest
+
+        ports:
+        - containerPort: 80
+
+   5  kubectl apply -f deployment.yaml
+   6  kubectl get deployments
+   7  kubectl get pods
+   8  kubectl logs podname
+   9  kubectl logs nginx-deployment-756d4cb589-6lh9q
+   10   kubectl expose deployment nginx-deployment --type=NodePort --port=80
+   11  kubectl get svc
+   12  kubectl get pods -o wide
+   13  kubectl port-forward --address 0.0.0.0 service/nginx-deployment 8080:80
+   14  minikube start --driver=none
+           Kubernetes runs directly on EC2 host
+
+
+
