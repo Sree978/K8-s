@@ -1,0 +1,39 @@
+
+
+curl -LO https://github.com/kubernetes/minikube/releases/latest/download/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64
+minikube version
+minikube start
+
+ 1  curl -LO https://github.com/kubernetes/minikube/releases/latest/download/minikube-linux-amd64
+    2  sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-amd64
+    3  minikube version
+    4  minikube start
+    5  yum install docker -y
+    6  systemctl start docker
+    7  systemctl enable docker
+    8  minikube start
+    9  minikube start --driver=docker --force
+   10  kubectl get nodes
+   11  curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+   12  chmod +x kubectl
+   13  mv kubectl /usr/local/bin/
+   14  kubectl version --client
+   15  kubectl get nodes
+   16  minikube start
+   17  minikube start --force
+   18  kubectl get po -A
+   19  minikube kubectl -- get po -A
+   20  alias kubectl="minikube kubectl --"
+   21  minikube dashboard
+   22  kubectl create deployment hello-minikube --image=kicbase/echo-server:1.0
+   23  kubectl expose deployment hello-minikube --type=NodePort --port=8080
+   24  kubectl get services hello-minikube
+   25  minikube service hello-minikube
+   26  kubectl port-forward service/hello-minikube 7080:8080
+   27  kubectl port-forward --address 0.0.0.0 service/hello-minikube 7080:8080
+   28  minikube pause
+   29  minikube unpause
+   30  minikube status
+   31  kubectl get pods
+   32  kubectl port-forward --address 0.0.0.0 service/hello-minikube 7080:8080
