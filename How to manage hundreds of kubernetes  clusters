@@ -1,0 +1,13 @@
+K8s production systems
+Open-source Container Orchestration Engine (COE)
+
+Major Kubernetes Distributions
+Distribution	      Company	                Real-Time Usage
+EKS	              Amazon Web Services	      AWS cloud
+AKS	              Microsoft	                Azure cloud
+GKE	              Google	                  Google Cloud
+OpenShift	        Red Hat	                  Enterprise platforms
+Rancher	          SUSE	                    Multi-cluster management
+Minikube	        Minikube	            Learning/testing
+K3s	              SUse                 Lightweight Kubernetes
+kubeadm	          Kubernetes	          Manual cluster setup
