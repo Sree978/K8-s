@@ -1,0 +1,25 @@
+////Complete Real-Time Request Flow////
+
+kubectl apply deployment.yaml
+            ↓
+API Server receives request
+            ↓
+etcd stores desired state
+            ↓
+Scheduler selects node
+            ↓
+Controller ensures pod creation
+            ↓
+Kubelet starts container
+            ↓
+Application becomes accessible
+
+Real-Time DevOps Usage
+
+Task	                    Component Used
+Deploy application	      kubectl
+Cluster management	      API Server
+Pod scheduling	          Scheduler
+Auto healing	            Controller
+Node communication	       Kubelet
+Data storage	              etcd
