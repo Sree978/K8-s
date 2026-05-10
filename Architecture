@@ -1,0 +1,45 @@
+K8's
+                +----------------------+
+                |      kubectl         |
+                +----------+-----------+
+                           |
+                           v
+                +----------------------+
+                |     API Server       |
+                +----+----+----+-------+
+                     |    |    |
+                     |    |    |
+                     v    v    v
+                +------+ +---------+ +-------------+
+                |etcd  | |Scheduler| |Controllers |
+                +------+ +---------+ +-------------+
+
+=====================================================
+
+          Worker Node 1                Worker Node 2
+      +------------------+         +------------------+
+      | Kubelet          |         | Kubelet          |
+      | Kube Proxy       |         | Kube Proxy       |
+      | ContainerRuntime |         | ContainerRuntime |
+      | Pods             |         | Pods             |
+      +------------------+         +------------------+
+
+Worker Node Components in Kubernetes
+1. Kubelet  : Kubelet is an agent running on every worker node It communicates with the API Servers ,Ensures pods and containers are running properly.
+Monitors pod health continuously.
+Simple Interview Line:
+“Kubelet acts as a node agent that manages pods on worker nodes.”
+2. Kube Proxy:   Kube Proxy manages networking inside the cluster.Handles communication between services and pods.Performs load balancing and traffic forwarding.
+Example:
+If multiple pods are running,Kube Proxy distributes traffic among them.
+Simple Interview Line:
+“Kube Proxy handles service networking and pod communication.”
+3. Container Runtime Responsible for pulling images and running containers.Creates and manages containers inside pods.
+Examples:Docker,containerd,CRI-O
+Simple Interview Line:
+“Container Runtime actually runs the containers in Kubernetes.”
+4. Pods : Smallest deployable unit in Kubernetes.A pod contains one or more containers.
+Pods share:Network,Storage ,IP address
+Important: Pods are temporary (ephemeral) in nature.
+Simple Interview Line:
+“Pods are the smallest execution units where applications run inside containers.”
