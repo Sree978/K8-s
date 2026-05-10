@@ -1,14 +1,14 @@
 K8's
                 +----------------------+
                 |      kubectl         |
-                +----------+-----------+
+                +----------+-----------+       
                            |
                            v
                 +----------------------+
                 |     API Server       |
                 +----+----+----+-------+
                      |    |    |
-                     |    |    |
+                     |    |    |                         --- all these are master node components
                      v    v    v
                 +------+ +---------+ +-------------+
                 |etcd  | |Scheduler| |Controllers |
@@ -16,7 +16,7 @@ K8's
 
 =====================================================
 
-          Worker Node 1                Worker Node 2
+        Worker Node 1                Worker Node 2  components
       +------------------+         +------------------+
       | Kubelet          |         | Kubelet          |
       | Kube Proxy       |         | Kube Proxy       |
