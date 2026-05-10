@@ -1,0 +1,35 @@
+Kubernetes is a container orchestration platform used to automate deployment, scaling, networking, and management of containers.
+ephemrial nature :
+Containers have an ephemeral nature because they can be created, stopped, deleted, and recreated anytime.
+Data inside the container may be lost if the container is removed.
+That’s why we use volumes for permanent data storage.
+---> these are the problems will over come over k8's
+1) Single-host Nature :
+Dokcer has a single-host nature because Docker containers normally run and communicate within one server/host only.
+Limitations:
+Containers are managed on a single machine.
+Not suitable for large-scale multi-server management.
+If the host fails, containers on that host become unavailable.
+*** To overcome this limitation, orchestration tools like Docker Swarm and Kubernetes are used.
+2) Auto healing :
+Auto-healing in containerization platforms means automatically detecting failed containers and restarting or replacing them to maintain application availability.
+Examples:
+Docker Swarm restarts failed containers automatically.
+Kubernetes replaces unhealthy pods using health checks and desired state management.
+3) Auto scaling
+Kubernetes supports auto scaling, which means automatically increasing or decreasing pods/resources based on application traffic or CPU/memory usage.
+Types:
+Horizontal Pod Autoscaler (HPA) → increases/decreases pod count.
+Vertical Pod Autoscaler (VPA) → adjusts CPU and memory.
+Cluster Autoscaler → adds/removes worker nodes automatically.
+Example:
+If traffic increases, Kubernetes automatically creates more pods to handle the load.
+4) enterprise-level support:
+provides enterprise-level support by offering:
+High availability and auto healing
+Auto scaling for applications
+Load balancing and service discovery
+Security and role-based access control (RBAC)
+Multi-node and multi-cluster management
+Monitoring, logging, and rolling updates
+It is widely used in enterprise production environments to manage large-scale containerized applications.
