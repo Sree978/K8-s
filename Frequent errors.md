@@ -26,11 +26,30 @@ Troubel shoot :
      Troubel shoot :
              1) missmatch of stoarge classes or EBS exceed
    increase EBS volume size
-   storage class size
+   storage class sizeNO
 7) NOde disk pressure
-     Troubel shoot :
-           node running out of disc causing pod eviction 
-9) 
+             node running out of disc causing pod eviction
+   Troubel shoot :
+         kubctl top nodes
+   
+9) Node not reday
+         when the node is not in ready state
+   Troubel shoot :
+      kubectl describe node node-id
+10) POD pending state
+         no resources available (no sufficient cpu 0r RAM not avaialable in worker node)
+    Troubel shoot :
+       eother autosacle server or reduse the limitations of a pod
+11) unauthorised acess (when we dont have permissions to access the resources )
+          Troubel shoot :
+12) seceret mimanagemnet
+         its happe when API'S gets expire exposing the secrets on logs
+    
+    
+    
+  logs
+  describe
+  top (kubtl top pod)
       
       
 
