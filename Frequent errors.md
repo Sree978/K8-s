@@ -50,6 +50,50 @@ Troubel shoot :
   logs
   describe
   top (kubtl top pod)
+
+
+1)  what Kubernetes networking & how it works
+
+  to assign ip address for POD
+  to provide ip & DNS name ,port for services
+
+2) what are PV & PVC
+   PV
+   PVC
+   used to decouple 
+
+4) how kuberentes auto scalling works
+     horizpnal pod
+     vertical pod 
+
+6) how do you debug kubernetes pods
+       describe
+       logs
+      exec
+      events
+      kubctl top
+   7) ROLLING UPDATES WORKS
+      
+   when we update images for the deployment, The deployment will create a new replica set from the replica set new pods created
+   whenever new pods created from replica set the old pod will deleted from replica set
+   the traffic will routed to new replica set
+   8) what ingress in kubernetes how does it work
+          used to ammage the external traffic ( http) host based & path based routed 
+   
+   9) pods resoucres need to grow beyond the limits
+   
+   10) what are sidecar conatiner or helpers conatiners
+       useuvally pod coantins two containers
+        primary conatiner where application going to run
+       seconday conatiner whoc helps to primary conatiner for run application
+            take backup
+       storing config file passing keys
+   11) QOS
+       
+   
+   
+   
+  
       
       
 
